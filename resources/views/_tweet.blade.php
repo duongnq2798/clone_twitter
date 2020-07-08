@@ -1,6 +1,8 @@
 <div class="p-2 border-b border-b-gray-400">
   <div class="flex flex-shrink-0 mb-3">
-  <img src="{{ $tweet->user->avatar}}" class="rounded-full mr-2" alt="">
+  <a href=" {{route('profile', $tweet->user)}}">
+    <img src="{{ $tweet->user->avatar}}" class="rounded-full mr-2" alt="">
+  </a>
     <div>
         <h5 class="font-bold mb-4">{{$tweet->user->name}}</h5>
   

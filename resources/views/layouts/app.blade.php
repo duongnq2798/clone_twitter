@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Twitter</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,7 +18,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(21, 32, 43);
+            color: #ffffff;
+        }
+    </style>
 </head>
+
 <body>
     <div id="app">
         <section class="px-8 py-4">
@@ -28,10 +35,22 @@
                 </h1>
             </header>
         </section>
+ 
+        <div class="flex lg:justify-between px-8 ">
+            <div class="lg:w-32 ">
+                @include('_sidebar-link')
+            </div>
+            <div class="flex-none sm:flex-1 md:flex-auto lg:flex-initial xl:flex-1 lg:mx-10">
+               @yield('content')
+            </div>
+            <div class="lg:w-1/6">
+                @include('_friend-list')
+            </div>
+        </div>
 
         <section class="px-8">
             <main class="container mx-auto">
-                @yield('content')
+                {{-- @yield('content') --}}
             </main>
         </section>
     </div>
