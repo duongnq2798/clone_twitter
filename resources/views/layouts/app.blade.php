@@ -21,12 +21,17 @@
 </head>
 <body>
     <div id="app">
-        <header>
-            <h1>Twitter</h1>
-        </header>
-        <main class="py-4">
-            @yield('content')
-        </main>
+        <section class="px-8">
+            <header>
+                <h1>Twitter</h1>
+            </header>
+        </section>
+
+        <section class="px-8">
+            <main class="py-4">
+                @yield('content')
+            </main>
+        </section>
     </div>
 </body>
 </html>
