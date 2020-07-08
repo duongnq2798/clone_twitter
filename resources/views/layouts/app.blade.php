@@ -21,14 +21,16 @@
 </head>
 <body>
     <div id="app">
-        <section class="px-8">
-            <header>
-                <h1>Twitter</h1>
+        <section class="px-8 py-4">
+            <header class="container mx-auto">  
+                <h1>
+                    <img style="width: 60px;height:60px" src="/images/logo.png" alt="Twitter">
+                </h1>
             </header>
         </section>
 
         <section class="px-8">
-            <main class="py-4">
+            <main class="container mx-auto">
                 @yield('content')
             </main>
         </section>
